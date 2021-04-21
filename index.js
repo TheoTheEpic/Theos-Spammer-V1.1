@@ -31,7 +31,7 @@ client.on('ready', async () => {
 if (type === 'channel') {
     const message = config.message
     const channel = await client.channels.fetch(config.targetid).catch((err) => console.log('There was an error finding the channel... ' + err));
-    console.log(`Successfully logged into ${client.user.tag}! Starting to spam ${user.id}. Type: CHANNEL`)
+    console.log(`Successfully logged into ${client.user.tag}! Starting to spam ${channel.name}. Type: CHANNEL`)
     while (true) {
 
    await channel.send(message)
