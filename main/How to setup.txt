@@ -1,7 +1,0 @@
-1) Run "setup.bat" (Make sure you have node installed)
-2) Open config.json in VS code or notepad
-3) Fill in token, message and targetid (Targetid is the user id or channel id you want to spam) in config.json and save.
-4) Open index.js with VS code or notepad
-5) Scroll down till you find a line that says "const type = 'dm'" and change it to "const type = 'channel'" if you want it to spam a channel and save.
-6) Run "run.bat"
-7) And your done! It will be spamming. Contact TheoTheEpic#0001 for support.
