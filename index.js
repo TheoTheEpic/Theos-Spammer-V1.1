@@ -12,6 +12,7 @@ if (!message) return console.log('Please provide a message in config.json')
     
 client.on('ready', async () => {
    const type = 'channel' // 'dm' to dm someone or 'channel' to send messages in channels
+   if (type === '') return console.log('Please provide a type!')
    if (type === 'dm') {
     const message = config.message
     const user = await client.users.fetch(config.targetid).catch((err) => console.log('There was an error finding the user... ' + err));
@@ -43,7 +44,6 @@ if (type === 'channel') {
    });
 }
 }
-if (type === '') return console.log('Please provide a type!')
 });
 
 client.login(client.config.token).catch((err) => console.log('There was an error logging in... ' + err));
